@@ -20,7 +20,8 @@ public class Model {
     
     private final int ROWS = 2; // 0 index row = player A, 1 index row = player B
     private final int COLUMN = 6; // 0 - 5 columns belong to player A or player B these are the pits including their bank
-    private int [][] pits;
+    private int [][] pits; // current pits 
+    private int [][] redoPits; // for the redo button to put back the original pits
     private final ArrayList <JTextField> textFields; // The Pits
     private final ArrayList <ChangeListener> listeners; // Updating the number of stones in each pit
     private final JTextArea textArea; // PLayer A's or B's turn. Next to the redo and move buttons.
@@ -28,6 +29,7 @@ public class Model {
     public Model()
     {
         pits = new int[ROWS][COLUMN];
+        redoPits = new int[ROWS][COLUMN];
         textFields = new ArrayList<JTextField>();
         textArea = new JTextArea("Player A"); // by default 
         listeners = new ArrayList<ChangeListener>();
