@@ -10,7 +10,22 @@
  */
 public class Controller {
     
-    public Controller()
+    private Model model;
+    private View view;
+    
+    public Controller(Model model, View view)
+    {
+        this.model = model;
+        this.view = view;
+    }
+    
+    // Called by the move button
+    public void move()
+    {
+    }
+    
+    // Called by the redo method
+    public void redo()
     {
     }
     
