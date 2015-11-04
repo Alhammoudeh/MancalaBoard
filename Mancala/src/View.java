@@ -101,7 +101,7 @@ public class View {
         
         JPanel pitsA = new JPanel();
         pitsA.setLayout(new FlowLayout());
-        for(int i = 0; i < 6; i++)
+        for(int i = 6; i >= 0; i--)
         {
             JTextField pit = new JTextField();
             pit.setText(Integer.toString(i));
