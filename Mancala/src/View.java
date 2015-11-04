@@ -42,13 +42,17 @@ public class View {
         
         JPanel topHeader = new JPanel(); // Create a panel to use the north area of the JFrame
         topHeader.setLayout(new FlowLayout()); // Set the layout to go from left to right 
-        redo.addActionListener(new ActionListener()
+        
+        // When the redo button is pressed, have the controller class intiate the redo action
+        redo.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
                    c.redo();
             }
         });
+        
+        // When the move button is pressed, have the controller class intiate the move action
         move.addActionListener(new ActionListener()
         {
             public void actionPerformed(ActionEvent e)
