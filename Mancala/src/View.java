@@ -1,6 +1,8 @@
 
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -27,9 +29,11 @@ public class View {
     private final JButton redo;
     private final JButton move;
     private final JTextArea playerTurn;
+    private final Controller control;
     
-    public View()
+    public View(Controller c)
     {
+        control = c;
         textFields = new JTextField[TOTALFIELDS];
         frame = new JFrame();
         redo = new JButton("Redo Move");
@@ -38,6 +42,21 @@ public class View {
         
         JPanel topHeader = new JPanel(); // Create a panel to use the north area of the JFrame
         topHeader.setLayout(new FlowLayout()); // Set the layout to go from left to right 
+        redo.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                   c.redo();
+            }
+        });
+        move.addActionListener(new ActionListener()
+        {
+            public void actionPerformed(ActionEvent e)
+            {
+                c.move();
+            }
+        });
+        
         topHeader.add(redo); // Add the redo button on the left 
         topHeader.add(playerTurn); // Add the playerTurn's signal in the middle 
         topHeader.add(move); // Add the move button on the right
