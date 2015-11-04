@@ -48,7 +48,7 @@ public class View {
         {
             public void actionPerformed(ActionEvent e)
             {
-                   c.redo();
+                c.redo();
             }
         });
         

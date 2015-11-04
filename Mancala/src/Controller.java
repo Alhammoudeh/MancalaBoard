@@ -29,12 +29,14 @@ public class Controller {
     public void move()
     {
         System.out.println("I am move from Controller class");
+        System.out.println("Remember to repaint or have the view update itself with the new data.");
     }
     
     // Called by the redo method
     public void redo()
     {
         System.out.println("I am redo from Controller class");
+        System.out.println("Remember to repaint or have the view update itself with the new data.");
     }
     
 }
