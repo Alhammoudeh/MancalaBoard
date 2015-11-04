@@ -15,7 +15,9 @@ public class MancalaBoardTester {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       View view = new View();
+       Model model = new Model();
+       Controller control = new Controller(model);
+       View view = new View(control);
     }
     
 }
