@@ -67,16 +67,28 @@ public class View {
         
         JPanel leftBank = new JPanel(); // Bank A
         JTextArea leftTextArea = new JTextArea(30, 5); // 40 rows and 10 columns
+        JLabel bankB = new JLabel();
+        bankB.setText("<HTML>M<br>A<br>N<br>C<br>A<br>L<br>A<br><br>B</HTML>");
+        // http://stackoverflow.com/questions/92781/how-do-i-present-text-vertically-in-a-jlabel-java-1-6
+        leftBank.setLayout(new FlowLayout());
+        leftBank.add(bankB);
         leftBank.add(leftTextArea);
         
         JPanel rightBank = new JPanel(); // Bank B
         JTextArea rightTextArea = new JTextArea(30, 5); // 40 rows and 10 columns
+        JLabel bankA = new JLabel();
+        bankA.setText("<HTML>M<br>A<br>N<br>C<br>A<br>L<br>A<br><br>A</HTML>");
+        rightBank.setLayout(new FlowLayout());
         rightBank.add(rightTextArea); 
+        rightBank.add(bankA);
         
         // Adding in the JLabels and JTextFields inside the center of the board
         JPanel centerBoard = new JPanel();
         centerBoard.setLayout(new BoxLayout(centerBoard, BoxLayout.Y_AXIS)); // Have the centerBoard display and add components from top to bottom
         
+        JLabel playerBDirection = new JLabel("<HTML><p>\u25C4------- PLAYER B</p></HTML>");
+        centerBoard.add(playerBDirection);
+        JLabel playerADirection = new JLabel("<HTML><p>-------\u25BA PLAYER A</p></HTML>");
         // Create the titles for Pit B
         JPanel labelsForPitB = new JPanel();
         labelsForPitB.setLayout(new FlowLayout());
@@ -120,7 +132,7 @@ public class View {
             labelsForPitA.add(pitLabel);
         }
         centerBoard.add(labelsForPitA); // Add the labelsForPitB into centerBoard's panel
-       
+        centerBoard.add(playerADirection);
         frame.add(topHeader, BorderLayout.NORTH); // Add the topHeader panel to the top
         frame.add(leftBank, BorderLayout.WEST); // Put the left Bank on the West of the board.
         frame.add(rightBank, BorderLayout.EAST); // Put the right Bank on the East of the board.
