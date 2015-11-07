@@ -86,6 +86,7 @@ public class View {
         JPanel centerBoard = new JPanel();
         centerBoard.setLayout(new BoxLayout(centerBoard, BoxLayout.Y_AXIS)); // Have the centerBoard display and add components from top to bottom
         
+        // http://stackoverflow.com/questions/8502068/java-having-buttons-displaying-arrows
         JLabel playerBDirection = new JLabel("<HTML><p>\u25C4------- PLAYER B</p></HTML>");
         centerBoard.add(playerBDirection);
         JLabel playerADirection = new JLabel("<HTML><p>-------\u25BA PLAYER A</p></HTML>");
