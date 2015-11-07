@@ -11,7 +11,7 @@
 public class Controller {
     
     private Model model;
-    private View view;
+    // private View view;
     
     public Controller(Model model)
     {

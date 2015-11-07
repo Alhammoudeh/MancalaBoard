@@ -40,7 +40,7 @@ public class Model {
         return pits[row][column];
     }
     
-    public void updateStonesFromPit(int row, int column, int stones)
+    public void pitStonesIntoPit(int row, int column, int stones)
     {
         pits[row][column] = stones;
     }
@@ -50,7 +50,7 @@ public class Model {
         return (ArrayList<JTextField>) textFields.clone();
     }
     
-    public void addTextFields(JTextField field)
+    public void addTextField(JTextField field)
     {
         textFields.add(field);
     }
