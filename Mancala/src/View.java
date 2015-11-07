@@ -1,8 +1,10 @@
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComponent;
@@ -67,6 +69,8 @@ public class View {
         
         JPanel leftBank = new JPanel(); // Bank A
         JTextArea leftTextArea = new JTextArea(30, 5); // 40 rows and 10 columns
+        // http://www.johnloomis.org/cpe101/notes/SwingGUI/borders/borders.html
+        leftTextArea.setBorder(BorderFactory.createLineBorder(Color.black)); // Black border around the bank
         JLabel bankB = new JLabel();
         bankB.setText("<HTML>M<br>A<br>N<br>C<br>A<br>L<br>A<br><br>B</HTML>");
         // http://stackoverflow.com/questions/92781/how-do-i-present-text-vertically-in-a-jlabel-java-1-6
@@ -76,6 +80,8 @@ public class View {
         
         JPanel rightBank = new JPanel(); // Bank B
         JTextArea rightTextArea = new JTextArea(30, 5); // 40 rows and 10 columns
+        // http://www.johnloomis.org/cpe101/notes/SwingGUI/borders/borders.html
+        rightTextArea.setBorder(BorderFactory.createLineBorder(Color.black)); // Black border around the bank
         JLabel bankA = new JLabel();
         bankA.setText("<HTML>M<br>A<br>N<br>C<br>A<br>L<br>A<br><br>A</HTML>");
         rightBank.setLayout(new FlowLayout());
