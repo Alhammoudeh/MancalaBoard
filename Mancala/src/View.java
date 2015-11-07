@@ -112,7 +112,7 @@ public class View {
         for(int i = 0; i < 6; i++)
         {
             JTextField pit = new JTextField();
-            pit.setText(Integer.toString(i));
+            pit.setText(Integer.toString(i) + "     ");
             pitsB.add(pit);
             addTextFields(pit);
         }
@@ -123,7 +123,7 @@ public class View {
         for(int i = 6; i >= 0; i--)
         {
             JTextField pit = new JTextField();
-            pit.setText(Integer.toString(i));
+            pit.setText(Integer.toString(i) + "    ");
             pitsA.add(pit);
             addTextFields(pit);
         }
